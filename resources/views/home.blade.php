@@ -17,7 +17,13 @@
     <div class="card-body">
         <div class="row">
             <div class="offset-9 col-3">
-                <input type="text" name="search" class="form-control" id="search"><br>
+             <div class="input-group">
+                <input type="text" name="search" class="form-control" id="search">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-search"></i></div>
+                </div>
+            </div>
+                <br>
             </div>
         </div>
         <table class="table table-bordered" id="mytable">
@@ -58,6 +64,7 @@
         <a href="{{route('novo_contato')}}" class="btn btn-primary">Adcionar <i class="fas fa-plus"></i></a>
     </div>
   </div>
+
 @endsection
 @section('js')
     @if(Session::has('sucesso'))
